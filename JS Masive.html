@@ -1,0 +1,54 @@
+<meta charset = "utf-8">
+<script>
+var arr = []
+max = 30
+min = -10
+for(i = 0; i < 15; i++) {
+	arr[i] = Math.round(Math.random() * (max - min) + min)
+}
+alert(arr)
+
+a = 0
+sum = 0
+b = 0
+for(i = 0; i < 15; i++) {
+	if (arr[i] > 0) {
+		a = arr[i] + a
+		sum = sum + 1
+	}
+	if (arr[i] == 0) {
+		b = b + 1
+	}
+}
+alert(a / sum)
+
+a1 = 0
+sum1 = 0
+for(i = 0; i < 15; i++) {
+	if (arr[i] < 0) {
+		a1 = arr[i] + a1
+		sum1 = sum1 + 1
+		arr[i] = arr[i] * arr[i]
+	}
+}
+alert(arr)
+
+alert("Среднее арифметическое положительных чисел - " + a / sum)
+alert("Среднее арифметическое отрицательных чисел - " + a1 / sum1)
+alert("Кол-во нулей - " + b)
+
+arr = []
+max = 2
+min = 0
+for(i = 0; i <= 1000000; i++) {
+	arr[i] = Math.round(Math.random() * (max - min) + min)
+}
+alert(arr)
+c = 0
+for(i = 0; i <= 1000000; i++) {
+	if (arr[i] == 2) {
+		c = c + 1
+	}
+}
+alert("Кол-во красных - " + c)
+</script>
